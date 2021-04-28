@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.BlogConfig'
+    'blog.apps.BlogConfig',
+    'mdeditor'
 ]
 
 MIDDLEWARE = [
@@ -82,8 +83,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blog',
         'USER': 'root',
-        'PASSWORD': 'jccfc',
-        'HOST': '19.19.9.231',
+        'PASSWORD': '19940422Qpf@',
+        'HOST': '192.168.42.129',
         'PORT': '3306'
     }
 }

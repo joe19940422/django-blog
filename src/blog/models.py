@@ -13,7 +13,7 @@
 
 from django.db import models
 from django.conf import settings
-
+from mdeditor.fields import MDTextField
 
 # Create your models here.
 
@@ -28,7 +28,8 @@ class Article(models.Model):
     title = models.CharField(max_length=200)  # 博客标题
     category = models.ForeignKey('Category', verbose_name='文章类型', on_delete=models.CASCADE)
     date_time = models.DateField(auto_now_add=True)  # 博客日期
-    content = models.TextField(blank=True, null=True)  # 文章正文
+    #content = models.TextField(blank=True, null=True)  # 文章正文
+    content = MDTextField()
     digest = models.TextField(blank=True, null=True)  # 文章摘要
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='作者', on_delete=models.CASCADE)
     view = models.BigIntegerField(default=0)  # 阅读数
